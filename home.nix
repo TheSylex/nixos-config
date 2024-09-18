@@ -1,4 +1,3 @@
-
 {
   config,
   pkgs,
@@ -23,6 +22,9 @@
       editor = {
         true-color = true;
         line-number = "relative";
+        undercurl = true;
+        bufferline = "multiple";
+        color-modes = true;
         lsp.display-messages = true;
         lsp.display-inlay-hints = true;
       };
@@ -42,6 +44,13 @@
           e = "move_visual_line_up";
           i = "move_visual_line_down";
           o = "move_char_right";
+
+          A-n = "select_prev_sibling";
+          A-e = "shrink_selection";
+          A-i = "expand_selection";
+          A-o = "select_next_sibling";
+
+          A-p = "no_op";
 
           h = "open_below";
           H = "open_above";
@@ -215,7 +224,7 @@
         format = "$time";       
       };
 
-      aws.format = "[$symbol($profile)(($region))([$duration])]($style)";
+      aws.format = "[$symbol($profile)(($region))(($duration))]($style)";
       bun.format = "[$symbol($version)]($style)";
       c.format = "[$symbol($version(-$name))]($style)";
       cmake.format = "[$symbol($version)]($style)";

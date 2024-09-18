@@ -19,7 +19,7 @@
     };
 
     helix-flake = {
-      url = "github:helix-editor/helix/24.03";
+      url = "github:helix-editor/helix/24.07";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
